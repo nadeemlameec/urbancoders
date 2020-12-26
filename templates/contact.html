@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %} Contact {% endblock title %}
+{%block body %} 
+<div class="container">
+  <div class="jumbotron">
+<form method="post" action="/contact">
+{% csrf_token %}
+          <h1 class='container text-center'> Contact Form </h1>
+      <div class="form-group">
+        <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">First name</label> <br>
+      <input type="text" class="form-control" name="Name" id="validationCustom01" placeholder="First name" value="Mark" required>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" name="Last_Name" id="validationCustom02" placeholder="Last name" value="Otto" required>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+<div class="col-md-4 mb-3">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" name="Email_id" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="col-md-4 mb-2">
+        <label for="validationCustom04 ">Phone Number</label>
+        <input type="number" class="form-control" name="Phone_number" id="validationCustom04" placeholder="Last name" value="Otto" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="container col-md-6 mb-1"> 
+         <select class="form-select" aria-label="Default select example">
+          <option value="1">Web development</option>
+          <option value="2">Graphic Designing </option>
+          </select>
+      </div>
+
+      <div class="container-fluid text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>  
+       </div>
+      </div>
+    </form>
+    </div>
+</div>
+
+
+
+    </body> {%endblock body%}
+
+
+</html>
